@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #222;
+    color: #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+}
+h1, p, h3 {
+    text-align: center;
+}
+
+.calculator {
+    background: #000000;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+}
+#display {
+    width: 96%;
+    padding: 10px;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    background: #f7eded;
+    color: rgb(255, 0, 0);
+    border: none;
+    text-align: right;
+}
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+.btn {
+    padding: 15px;
+    font-size: 1.2rem;
+    background: #444;
+    color: #eee;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+.btn:hover {
+    background: #555;
+}
+.btn:active {
+    transform: scale(0.95);
+}
+
+.history {
+    margin-top: 10px;
+    max-width: 300px;
+    text-align: left;
+}
+.history div {
+    background: #444;
+    padding: 5px;
+    margin: 3px 0;
+    border-radius: 5px;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+body.light-mode {
+    background: #fefefe;
+    color: #333;
+}
+body.light-mode .calculator {
+    background: #ddd;
+}
+body.light-mode #display {
+    background: #fff;
+    color: #000;
+}
+body.light-mode .btn {
+    background: #bbb;
+    color: #000;
+}
+body.light-mode .btn:hover {
+    background: #999;
+}
+body.light-mode .history div {
+    background: #eee;
+}
+
+@media (max-width: 600px) {
+    .calculator {
+        width: 95%;
+        padding: 15px;
+    }
+    .btn {
+        padding: 12px;
+        font-size: 1rem;
+    }
+    #display {
+        font-size: 1.3rem;
+    }
+}
